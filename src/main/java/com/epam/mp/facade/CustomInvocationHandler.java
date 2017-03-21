@@ -22,7 +22,7 @@ public class CustomInvocationHandler implements InvocationHandler {
         Object result = method.invoke(facade, args);
         Instant execEndTime = Instant.now();
         postExec(method.getName(), result, Duration.between(execStartTime, execEndTime));
-        return null;
+        return result;
     }
 
     private void preExec(String methodName, Parameter[] parameters) {
