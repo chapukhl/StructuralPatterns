@@ -12,7 +12,7 @@ import java.io.IOException;
 public class AdapterRunner {
 
     public static void main(String[] args) throws IOException {
-        UserJsonParser userJsonParser = new GsonAdapterParser();
+       UserJsonParser userJsonParser = new GsonAdapterParser();
 //        userJsonParser.readUser();
 //        userJsonParser.updateUser(new User("qwerty", "test"));
         userJsonParser = new JacksonAdapterParser();
